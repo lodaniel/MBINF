@@ -1,0 +1,79 @@
+TITU
+*** Caso Maquina versus Barra Infinita ***
+ULOG
+2
+MBINF.SAV
+ARQV REST
+01
+ULOG
+4
+MBINF_RT.OUT
+ULOG
+8
+MBINF_RT.PLT
+ULOG
+9
+MBINF_RT.LOG
+DOPC IMPR CONT FILE
+(Op) E (Op) E (Op)
+IMPR   FILE
+999999
+DCTE
+(Ct) (Val )
+TEPQ    .01
+TEMD  1.E-7
+TETE  1.E-7
+TABS  1.E-7
+999999
+DMDG MD01
+(No)   (L'd)(Ra )( H )( D )(MVA)Fr C
+0001                            60
+(
+999999
+DMDG MD02
+(No)   (CS) (Ld )(Lq )(L'd)     (L"d)(Ll )(T'd)     (T"d)(T"q)
+   2      1 113.8 68.1  35.      28.8 15.8  5.6      0.08 0.15
+(No)   (Ra )( H )( D )(MVA)Fr C  
+   2        4.938      184.
+999999
+DCST
+(Nc)   T (  P1  ) (  P2  ) (  P3  )
+0001   2 0.013    7.920    0.8
+999999
+DCDU
+(Regulador de Tensao de primeira ordem
+(ncdu) ( nome cdu )
+  0001 AVR
+(nb)i(tipo)o(stip)s(vent) (vsai) ( p1 )( p2 )( p3 )( p4 ) (vmin) (vmax)
+  01 ENTRAD               Vref
+  02 IMPORT VOLT          Vt
+  03 IMPORT VSAD          Vsad
+  04 SOMA          Vref   X3
+                  -Vt     X3
+                   Vsad   X3
+  05 LEDLAG        X3     Efd     100.0   0.0   1.0  0.05
+  06 EXPORT EFD    Efd
+FIMCDU
+999999
+DMAQ
+( Nb)   Gr (P) (Q) Und ( Mg ) ( Mt )u( Mv )u( Me )u(Xvd)(Nbc)
+    1   10           6      2      1u
+    2   10                  1
+999999
+DEVT
+(Tp) ( Tempo)( El )( Pa)Nc( Ex) ( % ) (ABS ) Gr Und         (Bl)P ( Rc ) ( Xc ) ( Bc ) (Defas)
+MDSH      1.0     1                      1.0                  
+999999
+DPLT
+(Tipo)M( El ) ( Pa) Nc Gp ( Br) Gr ( Ex) (Bl) P   (              Nome da Variável               )
+VOLT        1
+FMAQ        1          10
+PELE        1          10
+QELE        1          10
+DELT        1          10
+999999
+DSIM
+( Tmax ) (Stp) ( P ) ( I ) ( F )
+    50.0  .001     5     1     1
+EXSI
+FIM
